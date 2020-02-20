@@ -20,7 +20,7 @@ namespace ScoreCalculator_1
 
             InitializeComponent();
         }
-
+        
         private void btnAdd_Click(object sender, EventArgs e)
         {
             /* Add the scores entered by the user and
@@ -31,7 +31,9 @@ namespace ScoreCalculator_1
 
             scoreTotal += score;
             scoreCount++;
-           decimal average = scoreTotal / scoreCount;
+            double average = scoreTotal / scoreCount;
+
+             //average = Math.Round((average), 1);
 
             txtScoreTotal.Text = scoreTotal.ToString();
             txtScoreCount.Text = scoreCount.ToString();
